@@ -1,3 +1,61 @@
+for (var i = 0; i < 100; i++) {
+    createH3(i);
+}
+
+function createH3(accNum) {
+    var createH3 = $('<h3 class="accH3">Accusation ' + accNum + '</h3>');
+    $('#accusations').append(createH3);
+    createH3.click(function () {
+
+        var friend = ['Mark', 'Steven', 'Selene', 'Rayne', 'Pheften'];
+        var currFriend = (friend[accNum % friend.length]);
+        var where = ['Dinning Room', 'Co-ed Bathroom', 'Office',
+            'Kitchen', 'Garden Maze', 'Personal Starbucks location', 'Library',
+            'The West Wing', 'The Game Room', 'The Indoor Lazy River'];
+        var currWhere = (where[accNum % where.length]);
+            var weapon = ['spork', 'paper plate', 'soap-a-rope', 'plunger',
+            'Audrey 2', 'angry corgi', 'Swingline stapler', 'coffee pot',
+            'knife', 'salad shooter', 'plastic straw', 'frother', 'enchanted rose',
+            'the beast', 'loaded dice', 'nerf sword', 'aligator float', 'piranah',
+            'the Necronomicron', 'boom-stick'];
+        var currWeapon = (weapon[accNum % weapon.length]);
+
+        alert('I accuse ' + currFriend + ', with the ' + currWeapon + ' in the ' + currWhere + '.')
+
+    })
+}
+
+ // var currFriend = function name () {
+        //     var list = ['Mark', 'Steven', 'Selene', 'Rayne', 'Pheften'];    
+        //     return list[getFriend++ % list.length];
+        // };
+
+
+        // function friendCounter(friend) {
+        //     var friendCounter = friend[0]
+        //     function changeBy(val) {
+        //         friendCounter += val;
+        //         var currFriend = friend[friendCounter]
+        //         return currFriend;
+        //     }
+        //     return {
+        //         increment: function () {
+        //             changeBy(1);
+        //         },
+        //         value: function () {
+        //             return friendCounter;
+
+        //         }
+        //     }
+        // }
+
+
+
+// console.log(currFriend);
+// friendCounter.increment;
+// console.log(currFriend);
+
+
 //Global scope
 // function makeAccuse() {
 //     var accusation = print2page();
@@ -29,30 +87,6 @@
 // console.log(counter.value()); 
 // counter.increment(); 
 // console.log(counter.value());
-
-for (var i = 0; i < 10; i++) {
-    createH3(i);
-}
-
-function createH3(accNum) {
-    var createH3 = $('<h3 class="accH3">Accusation ' + accNum + '</h3>');
-     $('#accusations').append(createH3);
-     createH3.click(function(){
-         alert(accNum + ' was clicked')
-     })
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -93,9 +127,6 @@ function createH3(accNum) {
 // }
 // }
 //console.log(i);
-
-
-
 
 
 
